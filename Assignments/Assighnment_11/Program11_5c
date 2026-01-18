@@ -1,0 +1,64 @@
+////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////
+//
+// Function Name : RangeDisplayRev
+// Description   : Display numbers in reverse order from range
+// Input         : Integer, Integer
+// Output        : Displays numbers
+// Author        : Sakshi Santosh Jadhav
+// Date          : 21/11/2025
+//
+////////////////////////////////////////////////////////////////////
+
+void RangeDisplayRev(int iStart, int iEnd)
+{
+    int i = 0;
+
+    if(iStart > iEnd)
+    {
+        printf("Invalid range\n");
+        return;
+    }
+
+    for(i = iEnd; i >= iStart; i--)
+    {
+        printf("%d ", i);
+    }
+}
+
+////////////////////////////////////////////////////////////////////
+//
+// Entry point function
+//
+////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue1 = 0, iValue2 = 0;
+
+    printf("Enter starting point: ");
+    scanf("%d",&iValue1);
+
+    printf("Enter ending point: ");
+    scanf("%d",&iValue2);
+
+    RangeDisplayRev(iValue1, iValue2);
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////
+//
+// Test Cases
+//
+// Input  : 5 10
+// Output : 10 9 8 7 6 5
+//
+//////////////////////////////////////////////////////////////////// 
