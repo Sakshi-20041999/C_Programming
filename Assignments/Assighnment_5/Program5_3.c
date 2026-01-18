@@ -1,0 +1,67 @@
+////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////
+//
+// Function Name : CheckNumberType
+// Description   : Checks whether number is positive, negative or zero
+// Input         : Integer
+// Output        : Displays result
+// Author        : Sakshi Santosh Jadhav
+// Date          : 7/11/2025
+//
+////////////////////////////////////////////////////////////////////
+
+void CheckNumberType(int iNo)
+{
+    if(iNo > 0)
+    {
+        printf("Number is positive");
+    }
+    else if(iNo < 0)
+    {
+        printf("Number is negative");
+    }
+    else
+    {
+        printf("Number is zero");
+    }
+}
+
+////////////////////////////////////////////////////////////////////
+//
+// Entry point Function
+//
+////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter number : ");
+    scanf("%d",&iValue);
+
+    CheckNumberType(iValue);
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////
+//
+// Test Cases
+//
+// Input  : 10
+// Output : Number is positive
+//
+// Input  : -10
+// Output : Number is negative
+//
+// Input  : 0
+// Output : Number is zero
+//
+////////////////////////////////////////////////////////////////////
