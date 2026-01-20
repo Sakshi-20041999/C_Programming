@@ -1,0 +1,70 @@
+////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////
+//
+// Function Name :  CountOdd
+// Description   :  Counts number of odd digits in the given number
+// Input         :  Integer
+// Output        :  Integer
+// Author        :  Sakshi Santosh Jadhav
+//
+////////////////////////////////////////////////////////////////////
+
+int CountOdd(int iNo)
+{
+    int iDigit = 0, iCnt = 0;
+
+    if(iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    while(iNo != 0)
+    {
+        iDigit = iNo % 10;
+        if(iDigit % 2 != 0)
+        {
+            iCnt++;
+        }
+        iNo = iNo / 10;
+    }
+    return iCnt;
+}
+
+////////////////////////////////////////////////////////////////////
+//
+// Entry Point Function
+//
+////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0, iRet = 0;
+
+    printf("Enter number: ");
+    scanf("%d",&iValue);
+
+    iRet = CountOdd(iValue);
+
+    printf("Count of odd digits: %d\n",iRet);
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////
+//
+// Test Cases
+//
+// Input  : 1234
+// Output : 2
+//
+// Input  : 975
+// Output : 3
+//
+//////////////////////////////////////////////////////////////////// 
