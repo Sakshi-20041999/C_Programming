@@ -1,0 +1,63 @@
+////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////
+//
+//  Function Name : strtogglex
+//  Description   : Toggles case of each character in string
+//  Input         : Character pointer
+//  Output        : Modified string
+//  Author        : Sakshi Santosh Jadhav
+//  Date          : 27/11/2025
+//
+////////////////////////////////////////////////////////////////////
+
+void strtogglex(char *str)
+{
+    while(*str != '\0')
+    {
+        if(*str >= 'A' && *str <= 'Z')
+        {
+            *str = *str + 32;
+        }
+        else if(*str >= 'a' && *str <= 'z')
+        {
+            *str = *str - 32;
+        }
+        str++;
+    }
+}
+
+////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function
+//
+////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char arr[50];
+
+    printf("Enter string: ");
+    scanf("%[^\n]s", arr);
+
+    strtogglex(arr);
+
+    printf("Modified string is %s", arr);
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////
+//
+//  Test Case
+//
+//  Input  : HeLLo
+//  Output : hEllO
+//
+//////////////////////////////////////////////////////////////////// 
